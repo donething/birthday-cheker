@@ -19,8 +19,7 @@ const (
 
 func Check(sufix string) {
 	date := time.Date(2018, time.January, 1, 0, 0, 0, 0, time.Local)
-	log.Println("约定时间：", date.Year(), int(date.Month()), date.Day(),
-		date.Hour(), date.Minute(), date.Second())
+	log.Println("约定时间：", date.String())
 
 	for ; date.Year() == 2018; date = date.Add(time.Hour * 24) {
 		dateStr := fillDate(date) + sufix
